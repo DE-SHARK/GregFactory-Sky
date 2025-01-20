@@ -45,3 +45,5 @@ launcher_profiles.json
 /*.jar
 /*.json
 *.zip
+/pfm
+modpack.cfg
