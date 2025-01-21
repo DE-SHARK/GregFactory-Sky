@@ -47,6 +47,7 @@ launcher_profiles.json
 *.zip
 /pfm
 modpack.cfg
+.curseclient
 
 # defaultconfigs
 /defaultconfigs/*
