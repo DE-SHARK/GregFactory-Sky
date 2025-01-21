@@ -1,7 +1,7 @@
 /.vscode
 /.idea
 /assets
-/defaultconfigs
+# /defaultconfigs
 /Progregss-natives
 /Code
 /local
@@ -47,3 +47,6 @@ launcher_profiles.json
 *.zip
 /pfm
 modpack.cfg
+
+# defaultconfigs
+/defaultconfigs/*
