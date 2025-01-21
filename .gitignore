@@ -54,5 +54,16 @@ modpack.cfg
 !/defaultconfigs/ae2
 !/defaultconfigs/inventoryprofilesnext
 
+
 # configs
 /config/*
+!/config/almostunified
+!/config/com.yuushya
+!/config/defaultworldtype
+!/config/exdeorum
+!/config/ftbquests
+!/config/ironjetpacks
+!/config/skyblockbuilder
+!/config/gtceu.yaml
+!/config/ironjetpacks-common.toml
+!/config/sophisticatedcore-common.toml
