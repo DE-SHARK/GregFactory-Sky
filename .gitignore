@@ -51,6 +51,7 @@ modpack.cfg
 # defaultconfigs
 /defaultconfigs/*
 !/defaultconfigs/ae2
+!/defaultconfigs/inventoryprofilesnext
 
 # configs
 /config/*
