@@ -50,6 +50,7 @@ modpack.cfg
 
 # defaultconfigs
 /defaultconfigs/*
+!/defaultconfigs/ae2
 
 # configs
 /config/*
