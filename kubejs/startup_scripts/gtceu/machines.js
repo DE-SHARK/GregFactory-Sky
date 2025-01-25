@@ -32,22 +32,24 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
 });
 
 GTCEuStartupEvents.registry("gtceu:machine", event => {
-    var high_pressure = true;
-    event.create("steam_sieve", "steam", true)
-        .recipeType("steam_sieve", true, true)
-        .renderer(() => {
-            high_pressure = !high_pressure;
-            return WorkableSteamHullRenderer(high_pressure, GTCEu.id("block/machines/sieve"));
+    event.create("steam_sieve", "steam")
+        .definition((tier,builder) =>{
+            builder.recipeType("steam_sieve")
+            .workableTieredHullRenderer(GTCEu.id("block/machines/sieve"))
         });
 
-    event.create("sieve", "simple",
-        GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
-        .recipeType("sieve", true, true)
-        .workableTieredHullRenderer("gtceu:block/machines/sieve");
+    event.create("sieve", "simple")
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier,builder) =>{
+            builder.recipeType("sieve")
+            .workableTieredHullRenderer("gtceu:block/machines/sieve")
+        });
 
-    event.create("inscriber", "simple",
-        GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
-        .recipeType("inscriber", true, true)
-        .tankScalingFunction(tier => tier * 4800)
-        .workableTieredHullRenderer("gtceu:block/machines/inscriber");
+    event.create("inscriber", "simple")
+        .tiers(GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
+        .definition((tier,builder) =>{
+            builder.recipeType("inscriber")
+            .workableTieredHullRenderer("gtceu:block/machines/inscriber")
+        })
+        .tankScalingFunction(tier => tier * 4800);
 });

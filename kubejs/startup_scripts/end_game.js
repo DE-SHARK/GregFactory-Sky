@@ -47,20 +47,29 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
 });
 
 GTCEuStartupEvents.registry("gtceu:machine", event => {
-    event.create("atom_breaker", "simple", GTValues.UV)
-        .recipeType("atom_breaker", true, true)
-        .workableTieredHullRenderer("gtceu:block/machines/electrolyzer");
-    event.create("proton_confiner", "simple", GTValues.UV)
-        .recipeType("proton_confiner", true, true)
-        .workableTieredHullRenderer("gtceu:block/machines/electrolyzer");
-    event.create("final_test", "simple", GTValues.UV)
-        .recipeType("final_test", true, true)
-        .workableTieredHullRenderer("gtceu:block/machines/assembler");
+    event.create("atom_breaker", "simple")
+    .tiers(GTValues.UV)
+    .definition((tier,builder) =>{
+        builder.recipeType("atom_breaker")
+        .workableTieredHullRenderer("gtceu:block/machines/electrolyzer")
+    })
+    event.create("proton_confiner", "simple")
+    .tiers(GTValues.UV)
+    .definition((tier,builder) =>{
+        builder.recipeType("proton_confiner")
+        .workableTieredHullRenderer("gtceu:block/machines/electrolyzer")
+    })
+    event.create("final_test", "simple")
+    .tiers(GTValues.UV)
+    .definition((tier,builder) =>{
+        builder.recipeType("final_test")
+        .workableTieredHullRenderer("gtceu:block/machines/assembler")
+    })
 
     event.create("emulator", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType("emulator")
-        .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
+        // .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXXXXXXXX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XGGGGGGGX", "XXXXXXXXX")
             .aisle("XXXXXXXXX", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "GAAAAAAAG", "XGGGGGGGX")

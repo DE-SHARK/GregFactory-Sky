@@ -31,4 +31,13 @@ ServerEvents.recipes(event => {
             .resultItem("minecraft:" + color + "_bed")
             .build());
     });
+
+    event.shaped(
+        "1x gtceu:fluid_tag_filter",
+        ["AAA", "ABA", "AAA"],
+        {
+            A: "#minecraft:paper",
+            B: "#minecraft:bucket"
+        }
+    );
 });

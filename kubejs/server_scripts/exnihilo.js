@@ -1,7 +1,7 @@
 /*
 * exnihilo.js - Modify recipes about Ex Nihilo.
 */
-const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition");
+// const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition");
 
 ServerEvents.recipes(event => {
     function remove_recipe(name) {
@@ -328,14 +328,14 @@ ServerEvents.recipes(event => {
     add_sieve_recipe("dust", "exdeorum:dust", mesh_6_dust_table, "netherite");
 
     // Crushed Netherrack
-    event.recipes.gtceu.rock_breaker("gtceu:rock_breaker/netherrack")
-        .notConsumable("minecraft:netherrack")
-        .itemOutputs("minecraft:netherrack")
-        .addCondition(RockBreakerCondition.INSTANCE)
-    ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
-    ["addData(java.lang.String,java.lang.String)"]("fluidB", "exdeorum:witch_water")
-        .EUt(30)
-        .duration(16);
+    // event.recipes.gtceu.rock_breaker("gtceu:rock_breaker/netherrack")
+    //     .notConsumable("minecraft:netherrack")
+    //     .itemOutputs("minecraft:netherrack")
+    //     // .addCondition(RockBreakerCondition.INSTANCE)
+    // ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+    // ["addData(java.lang.String,java.lang.String)"]("fluidB", "exdeorum:witch_water")
+    //     .EUt(30)
+    //     .duration(16);
 
     event.recipes.gtceu.forge_hammer("gtceu:forge_hammer/netherrack_to_crushed_netherrack")
         .itemInputs("minecraft:netherrack")
@@ -394,14 +394,14 @@ ServerEvents.recipes(event => {
     add_sieve_recipe("crushed_netherrack", "exdeorum:crushed_netherrack", mesh_6_crushed_netherrack_table, "netherite");    // Crushed Netherrack
 
     // End Stone
-    event.recipes.gtceu.rock_breaker("gtceu:rock_breaker/end_stone")
-        .notConsumable("minecraft:end_stone")
-        .itemOutputs("minecraft:end_stone")
-        .addCondition(RockBreakerCondition.INSTANCE)
-    ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
-    ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
-        .EUt(120)
-        .duration(16);
+    // event.recipes.gtceu.rock_breaker("gtceu:rock_breaker/end_stone")
+    //     .notConsumable("minecraft:end_stone")
+    //     .itemOutputs("minecraft:end_stone")
+    //     // .addCondition(RockBreakerCondition.INSTANCE)
+    // ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
+    // ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+    //     .EUt(120)
+    //     .duration(16);
 
     event.recipes.gtceu.forge_hammer("gtceu:forge_hammer/end_stone_to_crushed_end_stone")
         .itemInputs("minecraft:end_stone")
